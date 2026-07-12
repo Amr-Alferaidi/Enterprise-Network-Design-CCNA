@@ -231,6 +231,7 @@ spanning-tree vlan 30 root primary
 | 20   | 192.168.20.60  |
 | 30   | 192.168.30.28  |
 ---
+### configurations
 MLS4
 ```
 interface vlan 10
@@ -263,3 +264,94 @@ interface vlan 30
  standby 30 priority 110
  standby 30 preempt
  ```
+---
+
+### Verification
+MLS4
+```
+Vlan10 - Group 10
+  State is Active
+    5 state changes, last state change 00:00:27
+  Virtual IP address is 192.168.10.124
+  Active virtual MAC address is 0000.0C07.AC0A
+    Local virtual MAC address is 0000.0C07.AC0A (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.9 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 192.168.10.125
+  Priority 120 (configured 120)
+  Group name is hsrp-Vl1-10 (default)
+Vlan20 - Group 20
+  State is Standby
+    5 state changes, last state change 00:00:29
+  Virtual IP address is 192.168.20.60
+  Active virtual MAC address is 0000.0C07.AC14
+    Local virtual MAC address is 0000.0C07.AC14 (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.482 secs
+  Preemption enabled
+  Active router is 192.168.20.61
+  Standby router is local
+  Priority 80 (configured 80)
+  Group name is hsrp-Vl2-20 (default)
+Vlan30 - Group 30
+  State is Standby
+    6 state changes, last state change 00:00:36
+  Virtual IP address is 192.168.30.28
+  Active virtual MAC address is 0000.0C07.AC1E
+    Local virtual MAC address is 0000.0C07.AC1E (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.403 secs
+  Preemption enabled
+  Active router is 192.168.30.29
+  Standby router is local
+  Priority 80 (configured 80)
+  Group name is hsrp-Vl3-30 (default)
+```
+MLS5
+```
+Vlan10 - Group 10
+  State is Standby
+    7 state changes, last state change 00:00:38
+  Virtual IP address is 192.168.10.124
+  Active virtual MAC address is 0000.0C07.AC0A
+    Local virtual MAC address is 0000.0C07.AC0A (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.859 secs
+  Preemption enabled
+  Active router is 192.168.10.126
+  Standby router is local
+  Priority 100 (default 100)
+  Group name is hsrp-Vl1-10 (default)
+Vlan20 - Group 20
+  State is Active
+    4 state changes, last state change 00:00:18
+  Virtual IP address is 192.168.20.60
+  Active virtual MAC address is 0000.0C07.AC14
+    Local virtual MAC address is 0000.0C07.AC14 (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.077 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 192.168.20.62
+  Priority 120 (configured 120)
+  Group name is hsrp-Vl2-20 (default)
+Vlan30 - Group 30
+  State is Active
+    5 state changes, last state change 00:00:26
+  Virtual IP address is 192.168.30.28
+  Active virtual MAC address is 0000.0C07.AC1E
+    Local virtual MAC address is 0000.0C07.AC1E (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.073 secs
+  Preemption enabled
+  Active router is local
+  Standby router is 192.168.30.30
+  Priority 120 (configured 120)
+  Group name is hsrp-Vl3-30 (default)
+```
+---
+
+
+
