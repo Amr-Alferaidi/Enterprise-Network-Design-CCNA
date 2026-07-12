@@ -196,4 +196,70 @@ ip routing
 ---
 ### Verification
 
+<img width="688" height="102" alt="SVI MLS4" src="https://github.com/user-attachments/assets/bc8033a3-abfc-43bb-b8e6-4dfd448c5433" />
 
+---
+<img width="693" height="111" alt="SVI MLS5" src="https://github.com/user-attachments/assets/acf61165-853e-45de-8bff-eebcf129cd47" />
+
+---
+
+## Spanning Tree Protocol (STP)
+
+### Configuration
+
+MLS4
+
+```
+spanning-tree vlan 10 root primary
+spanning-tree vlan 20 root secondary
+spanning-tree vlan 30 root secondary
+```
+---
+MLS5
+```
+spanning-tree vlan 10 root secondary
+spanning-tree vlan 20 root primary
+spanning-tree vlan 30 root primary
+```
+## HSRP (Gateway Redundancy)
+
+### Virtual IPs
+
+| VLAN | Virtual IP |
+|------|-----------|
+| 10   | 192.168.10.124 |
+| 20   | 192.168.20.60  |
+| 30   | 192.168.30.28  |
+---
+MLS4
+```
+interface vlan 10
+ standby 10 ip 192.168.10.124
+ standby 10 priority 110
+ standby 10 preempt
+
+interface vlan 20
+ standby 20 ip 192.168.20.60
+ standby 20 priority 90
+
+interface vlan 30
+ standby 30 ip 192.168.30.28
+ standby 30 priority 90
+ ```
+---
+MLS5
+```
+interface vlan 10
+ standby 10 ip 192.168.10.124
+ standby 10 priority 90
+
+interface vlan 20
+ standby 20 ip 192.168.20.60
+ standby 20 priority 110
+ standby 20 preempt
+
+interface vlan 30
+ standby 30 ip 192.168.30.28
+ standby 30 priority 110
+ standby 30 preempt
+ ```
