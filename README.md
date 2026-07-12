@@ -106,8 +106,7 @@ Sw1
 ```
 int fastethernet range f0/3,f0/8
 switchport mode trunk
-switchport trunk allowed vl 10
-switchport trunk allowed vl 20
+switchport trunk allowed vl 10,20
 ```
 ---
 SW2
@@ -115,8 +114,7 @@ SW2
 
 int fastethernet range f0/4-f0/5
 switchport mode trunk
-switchport trunk allowed vl 10
-switchport trunk allowed vl 30
+switchport trunk allowed vl 10,30
 ```
 ---
 Sw3
@@ -124,8 +122,7 @@ Sw3
 
 int fastethernet range f0/6-f0/7
 switchport mode trunk
-switchport trunk allowed vl 20
-switchport trunk allowed vl 30
+switchport trunk allowed vl 20,30
 ```
 ---
 MLS4
@@ -135,6 +132,8 @@ channel-group 1 mode active
 int fastethernet po1
 switchport trunk encapsulation dot1q 
 switchport mode trunk
+ex
+write 
 ```
 ---
 MLS5
@@ -144,6 +143,8 @@ channel-group 1 mode passive
 int fastethernet po1
 switchport trunk encapsulation dot1q 
 switchport mode trunk
+ex
+write
 ```
 ---
 ### Verification
@@ -162,7 +163,37 @@ switchport mode trunk
 <img width="678" height="334" alt="MLS5 Trunk and channel group" src="https://github.com/user-attachments/assets/82b6d435-77cd-413c-8873-e7460a078ad8" />
 
 ---
+## SVI
 
+### Configuration
+MLS4
+```
+interface vlan 10
+ ip address 192.168.10.126 255.255.255.128
 
+interface vlan 20
+ ip address 192.168.20.62 255.255.255.192
+
+interface vlan 30
+ ip address 192.168.30.30 255.255.255.224
+ex
+ip routing 
+```
+---
+MLS5
+```
+interface vlan 10
+ ip address 192.168.10.125 255.255.255.128
+
+interface vlan 20
+ ip address 192.168.20.61 255.255.255.192
+
+interface vlan 30
+ ip address 192.168.30.29 255.255.255.224
+ex
+ip routing 
+```
+---
+### Verification
 
 
