@@ -105,21 +105,33 @@ ex
 ---
 
 ## Verification
+show vlan brief (SW1)
 
-ضع صور:
-
-- show vlan brief (SW1)
   <img width="574" height="59" alt="SW1 V" src="https://github.com/user-attachments/assets/f853bc7b-5fa0-4b6b-a729-f59510849871" />
-- show vlan brief (SW2)
+
+  ---
+
+show vlan brief (SW2)
+
 <img width="595" height="69" alt="SW2 Vl" src="https://github.com/user-attachments/assets/76242da1-79c9-4c21-9280-1c8df5646cb8" />
-- show vlan brief (SW3)
+
+  ---
+show vlan brief (SW3)
+
 <img width="556" height="71" alt="SW3 V" src="https://github.com/user-attachments/assets/b5936596-ed29-4717-87fc-301d0bac8d18" />
-- show vlan brief (MLS4)
+  
+  ---
+show vlan brief (MLS4)
+
  <img width="688" height="102" alt="SVI MLS4" src="https://github.com/user-attachments/assets/60e8c7df-0527-4d9d-b157-0ecb5c6a4e41" />
-- show vlan brief (MLS5)
+
+  ---
+show vlan brief (MLS5)
+
 <img width="693" height="111" alt="SVI MLS5" src="https://github.com/user-attachments/assets/83c82224-473f-4be4-b44f-38b47b819eab" />
 
----
+  ---
+
 # Trunk Configuration
 
 ## Purpose
@@ -169,12 +181,18 @@ show interfaces trunk
 ```
 
 
-- SW1
- <img width="574" height="59" alt="SW1 V" src="https://github.com/user-attachments/assets/2c56e2c7-48e0-4763-bd5f-a4d27843b8b4" />
-- SW2
-<img width="595" height="69" alt="SW2 Vl" src="https://github.com/user-attachments/assets/6ff1bcdb-be42-4e53-b89a-b11435255f6e" />
-- SW3
-<img width="556" height="71" alt="SW3 V" src="https://github.com/user-attachments/assets/a9dd79c1-c926-4d5a-88fa-a8b683819963" />
+SW1
+<img width="501" height="241" alt="SW1Trunk" src="https://github.com/user-attachments/assets/bbafc54d-e8be-48b5-86df-44c9a1c2ec11" />
+  
+  ---
+SW2
+
+<img width="532" height="237" alt="SW2 Trunk" src="https://github.com/user-attachments/assets/63fac8ae-6323-4a4a-bc75-6d1fea3584e8" />
+ 
+  ---
+SW3
+
+<img width="526" height="234" alt="SW3 Trunk" src="https://github.com/user-attachments/assets/93428ff6-ea92-405d-90f8-a673def7720f" />
 
 ---
 
@@ -356,8 +374,7 @@ spanning-tree vlan 30 root primary
 ```bash
 show spanning-tree
 ```
-
-Place screenshots for:
+<img width="782" height="108" alt="show standby brief(MLS4)" src="https://github.com/user-attachments/assets/0a38428b-10aa-4b0f-a620-43b4180c2271" />
 
 - MLS4 STP
 ```
@@ -597,12 +614,10 @@ interface Vlan30
 ```bash
 show standby brief
 ```
-
-Place screenshots for:
-
 - MLS4 HSRP Status
-
+<img width="782" height="108" alt="show standby brief(MLS4)" src="https://github.com/user-attachments/assets/823f5bd8-dac8-41b7-befd-7a936f2e012c" />
 - MLS5 HSRP Status
+<img width="744" height="106" alt="show standby brief(MLS5)" src="https://github.com/user-attachments/assets/67b11d3a-9432-48b4-92c1-e94453272883" />
 
 ---
 
@@ -669,10 +684,13 @@ show ip interface brief
 Place screenshots for:
 
 - R1
+<img width="1366" height="768" alt="show ip interface brief(R1)" src="https://github.com/user-attachments/assets/a4935ad9-46fa-4454-86c0-a5d057e3bd40" />
 - R2
+<img width="1366" height="768" alt="show ip interface brief(R2)" src="https://github.com/user-attachments/assets/69f55e92-38be-4370-a5f6-a3e7537fc1c8" />
 - MLS4
+<img width="1366" height="768" alt="show ip interface brief(MLS4)" src="https://github.com/user-attachments/assets/a1cac00e-3803-4769-bbb7-cdcbfcbb38d9" />
 - MLS5
-
+<img width="1366" height="768" alt="show ip interface brief(MLS5)" src="https://github.com/user-attachments/assets/3e693bcd-c489-4a4f-895b-4df06ec7e071" />
 ---
 
 # OSPF (Dynamic Routing)
@@ -758,17 +776,27 @@ router ospf 1
 ```bash
 show ip ospf neighbor
 ```
+- MLS4
+<img width="1366" height="768" alt="show ip ospf nei(MLS4)" src="https://github.com/user-attachments/assets/0b37159e-022b-40ca-b9c2-acc55626b6a3" />
+- MLS5
+<img width="1366" height="768" alt="show ip ospf nei(MLS5)" src="https://github.com/user-attachments/assets/eb765e32-824c-4555-bfba-e8fbf15058d5" />
+- R1
+<img width="1366" height="768" alt="show ip ospf nei(R1)" src="https://github.com/user-attachments/assets/98507815-8707-4d01-b464-6fdc7c180567" />
+- R2
+<img width="1366" height="768" alt="show ip ospf nei(R2)" src="https://github.com/user-attachments/assets/dedeab21-fbe8-43c8-abcd-ac96e10300fa" />
 
 ```bash
 show ip route ospf
 ```
-
-Place screenshots for:
-
 - MLS4
+<img width="1366" height="768" alt="show ip ospf(MLS4)" src="https://github.com/user-attachments/assets/94007fa6-c21a-4050-854d-b9548f95367a" />
 - MLS5
+<img width="1366" height="768" alt="show ip ospf(MLS5)" src="https://github.com/user-attachments/assets/6e0f978c-33c6-40b6-ae00-52e160671788" />
 - R1
+<img width="1366" height="768" alt="show ip ospf(R1)" src="https://github.com/user-attachments/assets/3c007b35-341b-4d83-9a9c-549771891bf4" />
 - R2
+<img width="1366" height="768" alt="show ip ospf(R2)" src="https://github.com/user-attachments/assets/ce1d5051-0477-4686-9f06-c792516ea435" />
+
 
 ---
 
@@ -814,11 +842,12 @@ ip route 192.168.10.0 255.255.255.128 172.16.0.5
 show ip route static
 ```
 
-Place screenshots for:
-
 - MLS4
+<img width="1366" height="768" alt="show ip route static MLS4" src="https://github.com/user-attachments/assets/987e4b6e-e1ce-41a2-90a0-0cea839883c6" />
 - MLS5
+<img width="1366" height="768" alt="show ip route static MLS5" src="https://github.com/user-attachments/assets/0eb64904-5948-43d1-aaf7-d14ef0beef05" />
 - R2
+<img width="1366" height="768" alt="show ip route static R2" src="https://github.com/user-attachments/assets/6146bd67-2826-4fe9-9ee2-9b5b89719ae3" />
 
 ---
 
@@ -827,17 +856,25 @@ Place screenshots for:
 
 ## Purpose
 
-Network Address Translation (PAT) was configured on R1 to allow multiple private networks to access external networks using a single public IP address.
+NAT Overload (PAT) was configured on R1 to allow devices in VLAN 10, VLAN 20, and VLAN 30 to access the external network using the IP address assigned to the outside interface.
+
+PAT allows multiple inside-local addresses to share a single inside-global address by using unique port numbers.
 
 ---
 
 ## Configuration
 
+### Inside Networks ACL
+
 ```bash
 access-list 1 permit 192.168.10.0 0.0.0.127
 access-list 1 permit 192.168.20.0 0.0.0.63
 access-list 1 permit 192.168.30.0 0.0.0.31
+```
 
+### NAT Interfaces
+
+```bash
 interface FastEthernet0/0
  ip nat inside
 
@@ -846,7 +883,11 @@ interface FastEthernet0/1
 
 interface Ethernet0/1/0
  ip nat outside
+```
 
+### PAT Configuration
+
+```bash
 ip nat inside source list 1 interface Ethernet0/1/0 overload
 ```
 
@@ -855,48 +896,101 @@ ip nat inside source list 1 interface Ethernet0/1/0 overload
 ## Verification
 
 ```bash
-show access-lists
+show access-lists 1
+show ip nat statistics
+show ip nat translations
+```
+<img width="1366" height="768" alt="show access list 1" src="https://github.com/user-attachments/assets/cd3bbab8-4ab9-42fd-8bc1-164b7d15408e" />
+
+---
+
+<img width="1366" height="768" alt="show ip nat statistics" src="https://github.com/user-attachments/assets/69320987-6510-4d12-bf17-25be4b4633ae" />
+
+---
+
+<img width="1366" height="768" alt="show ip nat translations" src="https://github.com/user-attachments/assets/4a3c97c0-ef2b-4753-b6a5-868eb64a2edb" />
+
+
+## Testing
+
+From an internal PC:
+
+```text
+ping 1.1.1.2
+tracert 1.1.1.2
 ```
 
-```bash
-show ip nat statistics
-```
+After generating traffic, verify the translations again:
 
 ```bash
 show ip nat translations
+show ip nat statistics
 ```
-
-Place screenshots for each command.
-
 ---
 
 # DHCP
 
 ## Purpose
 
-DHCP was configured to automatically assign IP addresses, subnet masks, default gateways, and DNS information to end devices.
+DHCP was configured on **MLS5** to automatically assign IP addresses to devices connected to **VLAN 30**.
+
+Specific IP addresses were excluded from the DHCP pool to reserve them for network infrastructure and the HSRP virtual gateway.
 
 ---
 
 ## Configuration
 
-Place your DHCP pools here.
+```bash
+ip dhcp excluded-address 192.168.30.27
+ip dhcp excluded-address 192.168.30.28
+ip dhcp excluded-address 192.168.30.29
+ip dhcp excluded-address 192.168.30.30
+
+ip dhcp pool VLAN30
+ network 192.168.30.0 255.255.255.224
+ default-router 192.168.30.28
+```
+
+---
+
+## Reserved Addresses
+
+| IP Address | Purpose |
+|------------|---------|
+| 192.168.30.27 | Reserved Infrastructure Address |
+| 192.168.30.28 | HSRP Virtual Gateway |
+| 192.168.30.29 | MLS5 SVI |
+| 192.168.30.30 | MLS4 SVI |
 
 ---
 
 ## Verification
 
 ```bash
-show ip dhcp binding
+show running-config 
 ```
+<img width="1366" height="768" alt="show running-config MLS5" src="https://github.com/user-attachments/assets/427c11ee-ce94-42a0-a0a3-062b36270d54" />
 
 ```bash
 show ip dhcp pool
 ```
-# Testing & Verification
+<img width="1366" height="768" alt="show ip dhcp pool MLS5" src="https://github.com/user-attachments/assets/214f55d3-a3b0-4f99-a13f-0408b900dcf8" />
 
-The entire network was tested after completing the configuration to verify connectivity, routing, redundancy, and network services.
+```bash
+show ip dhcp binding
+```
+<img width="1366" height="768" alt="show ip dhcp binding MLS5" src="https://github.com/user-attachments/assets/899a2f1f-c817-47af-86d6-c8c4efb7c6ca" />
 
+---
+
+## Result
+
+Devices connected to VLAN 30 successfully received IP addresses from the configured DHCP pool.
+
+<img width="1366" height="768" alt="DHCP IP Addresing" src="https://github.com/user-attachments/assets/9e21be79-1ca9-4d57-996d-5867a40e5751" />
+
+
+The reserved infrastructure addresses and the HSRP virtual gateway were excluded from the DHCP scope to prevent IP address conflicts.
 ---
 
 ## Layer 2 Verification
@@ -917,7 +1011,6 @@ show etherchannel summary
 show spanning-tree
 ```
 
-Place screenshots for each command.
 
 ---
 
@@ -940,8 +1033,6 @@ show ip route ospf
 show ip route static
 ```
 
-Place screenshots for each command.
-
 ---
 
 ## Gateway Redundancy Verification
@@ -953,8 +1044,6 @@ HSRP was tested by verifying Active and Standby roles across all VLANs.
 ```bash
 show standby brief
 ```
-
-Place screenshots showing:
 
 - VLAN 10 Active on MLS4
 - VLAN 20 Active on MLS5
@@ -991,13 +1080,14 @@ Connectivity tests were performed between different VLANs to verify complete net
 Example tests:
 
 - PC1 → PC2
-- PC1 → Server
-- PC2 → PC6
 - VLAN 10 → VLAN 20
+<img width="1366" height="768" alt="Screenshot (75)" src="https://github.com/user-attachments/assets/b8740607-c098-4585-9727-503e34434622" />
+- PC1 → PC3
 - VLAN 10 → VLAN 30
+<img width="1366" height="768" alt="Screenshot (76)" src="https://github.com/user-attachments/assets/07511564-54e7-49ee-9f10-8e5d8b3c7970" />
+- PC2 → Ser6
 - VLAN 20 → VLAN 30
-
-Place screenshots of successful ping tests.
+<img width="1366" height="768" alt="Screenshot (77)" src="https://github.com/user-attachments/assets/9e929737-9511-4639-ba35-0d2a2bf1a0a3" />
 
 ---
 
